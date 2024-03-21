@@ -1,14 +1,6 @@
 * {
     box-sizing: border-box;
 }
-.mdl_box {
-    backdrop-filter: blur(8px);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-}
 .but {
     background-color: red;
     color: white;
@@ -22,12 +14,29 @@
 .but:hover {
     background-color: #dc3353;
 }
+/**/
+
+
+.mdl_box {
+    backdrop-filter: blur(8px);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
 .mdl_forma {
     background-color: white;
-    position: relative;
-    padding: 24px;
     width: 320px;
-    height: 876px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transform: translate(0%, 0%);
 }
 #comment {
     padding: 12px 16px;
@@ -43,6 +52,7 @@
 }
 #label-inpt {
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: 8px;
     font-family: "Montserrat", sans-serif;
@@ -115,4 +125,15 @@
     line-height: 79%;
     letter-spacing: 0.02em;
     color: #dc3353;
+}
+.star, .starr { 
+    color:#dc3353;
+    left: 0;
+    position: absolute;
+}
+.star {
+    left: 82px;
+}
+.starr {
+    left: 143px;
 }

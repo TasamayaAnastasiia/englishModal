@@ -7,6 +7,7 @@ const inputUserName = document.querySelector(".username");
 const butSubmit = document.querySelector(".but_submit");
 const inputUserPhone = document.querySelector(".phone");
 const formUser = document.querySelector(".forma_for_connect");
+const labelText = document.getElementById("label-inpt");
 const token = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
 let idCzat;
 
@@ -83,6 +84,8 @@ async function error() {
 
 buttonClick.addEventListener("click", (e) => {
     modalWindow.style.display = "flex";
+    modalWindow.style.alignItems = "center";
+    modalWindow.style.justifyContent = "center";
 });
 
 butClose.addEventListener("click", (e) => {
@@ -138,6 +141,3 @@ formUser.addEventListener("submit", async (e) => {
         `;
         sendMessage(message);
 });
-
-
-
