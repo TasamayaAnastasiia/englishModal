@@ -1,24 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load ="partials/header.html" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./modal.css">
+    <title>Modal</title>
+</head>
+<body>
+    <button class="but" type="buton">Click</button>
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
+    <div class="mdl_box">
+            <div class="mdl_forma">
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+                <svg class="close" fill="black" width="14" height="14">
+                    <use href="./sprite.svg#icon-close"></use>
+                </svg>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+                <h2 class="title_form">Зв’язатися зі мною</h2>
+                <p class="paragraf_form">Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.</p>
+                <form class="forma_for_connect">
+        
+                    <label id="label-inpt">Ваше ім’я
+                        <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" required>
+                    </label>
+
+                    <label id="label-inpt">Номер телефону
+                        <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\+[0-9]{11,12}" required>
+                    </label>
+
+                    <label id="label-inpt">Формат навчання
+                        <select class="user-inpt selected-category" name="education">
+                            <option value="Individual study">Індивідуальне навчання</option>
+                            <option value="Study with a friend">Парні заняття</option>
+                            <option value="Groupe study">Групові заняття</option>
+                        </select>
+                    </label>
+
+                    <label id="label-inpt">Коментар
+                        <textarea class="user-inpt text-com" name="comment" placeholder="Ваш коментар
+                        "></textarea>
+                    </label>
+                     
+                    <button class="but_submit" type="submit">ВІДПРАВИТИ</button> 
+        
+                </form>
+            </div>
+
+    </div>
+    
+    <script type="module" src="./modal.js" defer></script>
+</body>
 </html>
