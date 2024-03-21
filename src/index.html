@@ -12,7 +12,7 @@
     <title>Modal</title>
 </head>
 <body>
-    <button class="but" type="buton">Click</button>
+    <button class="but" type="button">Click</button>
 
     <div class="mdl_box">
         <div class="mdl_forma">
@@ -21,19 +21,19 @@
                 <use href="./sprite.svg#icon-close"></use>
             </svg>
 
-            <h2 class="title_form">Зв’язатися зі мною</h2>
-            <p class="paragraf_form">Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.</p>
+            <h2 class="title_form">Зв’язатися<br> зі мною</h2>
+            <p class="paragraf_form">Будь ласка, заповніть форму<br> і я зв’яжуся з Вами якнайшвидше для обговорення деталей.</p>
             <form class="forma_for_connect">
         
-              <label id="label-inpt">Ваше ім’я<span class="star">*</span>
+              <label class="label-inpt">Ваше ім’я*
               <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" required>
               </label>
 
-              <label id="label-inpt">Номер телефону<span class="starr">*</span>
+              <label class="label-inpt">Номер телефону*
               <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\+[0-9]{11,12}" required>
               </label>
 
-              <label id="label-inpt">Формат навчання
+              <label class="label-inpt">Формат навчання
                 <select class="user-inpt selected-category" name="education">
                     <option value="Individual study">Індивідуальне навчання</option>
                     <option value="Study with a friend">Парні заняття</option>
@@ -41,7 +41,7 @@
                 </select>
               </label>
 
-              <label id="label-inpt">Коментар
+              <label class="label-inpt">Коментар
                 <textarea class="user-inpt text-com" name="comment" placeholder="Ваш коментар"></textarea>
               </label>
                      
@@ -50,44 +50,7 @@
             </form>
         </div>
     </div>
-
-    <section class="section-home">
-      <div class="main-box container">
-        <div class="container-for-support">
-          <ul class="list_categories"></ul>
-          <!--support Ukraine-->
-          <div class="support-wrapper">
-              <div class="support-title">
-                <span class="support-paragraph">Support Ukraine</span>
-                <svg class="ukraine-emblem" width="20" height="32">
-                  <use href=""></use>
-                </svg>
-              </div>
-              <div class="swiper-container">
-                <div class="swiper">
-                  <div class="swiper-wrapper "> </div>
-                </div>
-              </div>
-              <button class="support-swiper-btn" type="button" aria-label="Scroll more funds">
-                <svg class="swiper-button-icon">
-                  <use href=""></use>
-                </svg>
-              </button> 
-            </div>
-          <!--support Ukraine-->
-        </div>
-        <div class="thumb-books">
-          <h1 class="main-title">Best Sellers <span class="blue">Books</span></h1>
     
-          <div class="container-loader">
-            <span class="loader"></span>
-          </div>
-    
-          <ul class="list-one"></ul>
-        </div>
-      </div>
-    </section>
-    
-    <script type="module" src="./modal.js" defer></script>
+    <script type="module" src="./modal.js"></script>
 </body>
 </html>
