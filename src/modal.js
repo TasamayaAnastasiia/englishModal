@@ -62,6 +62,8 @@ async function succes() {
         titleFdbk.style.textAlign = "center";
 }
 
+//succes error//
+
 async function error() {
     contentForm.style.height = "312px";
 
@@ -106,35 +108,35 @@ formUser.addEventListener("submit", async (e) => {
     checkName();
     checkPhone();
 
-async function sendMessage(message) {
-    await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
-            chat_id: idCzat,
-            text: message
+    async function sendMessage(message) {
+        await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
+                chat_id: idCzat,
+                text: message
+            })
+        .then(response => { 
+            succes();
+            response.status;
         })
-    .then(response => { 
-        succes();
-        response.status;
-    })
-    .catch(error => {
-        error();
-        console.error("Error in sending sms:", error)
-    });
-}
-    
-    const formData = new FormData(document.querySelector('.forma_for_connect'));
-    const userName = formData.get("username");
-    const userPhone = formData.get("phone");
-    const education = formData.get("education");
-    const comment = formData.get("comment");
-    
-    const message = `
-        Нова заявка:
-1) Им'я: ${userName};
-2) Телефон: ${userPhone};
-3) Формат навчання: ${education};
-4) Коментар: ${comment.split("").length > 0 ? comment : "Without comments"};
-    `;
-    sendMessage(message);
+        .catch(error => {
+            error();
+            console.error("Error in sending sms:", error)
+        });
+    }
+        
+        const formData = new FormData(document.querySelector('.forma_for_connect'));
+        const userName = formData.get("username");
+        const userPhone = formData.get("phone");
+        const education = formData.get("education");
+        const comment = formData.get("comment");
+        
+        const message = `
+            Нова заявка:
+    1) Им'я: ${userName};
+    2) Телефон: ${userPhone};
+    3) Формат навчання: ${education};
+    4) Коментар: ${comment.split("").length > 0 ? comment : "Without comments"};
+        `;
+        sendMessage(message);
 });
 
 
