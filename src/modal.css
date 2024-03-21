@@ -171,3 +171,20 @@
         margin: 24px 0 0 0;
     }
 }
+@media screen and (min-width: 1440px) {
+    .mdl_forma {
+        max-width: 1208px;
+        flex-direction: row;
+        gap: 48px;
+        padding: 80px 100px;
+    }
+    .title_form {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 121%;
+    }
+    .paragraf_form {
+        margin: 32px 0 0 0;
+        width: 280px;
+    }
+}
