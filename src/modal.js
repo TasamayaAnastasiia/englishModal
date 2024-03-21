@@ -83,9 +83,7 @@ async function error() {
 } 
 
 buttonClick.addEventListener("click", (e) => {
-    modalWindow.style.display = "flex";
-    modalWindow.style.alignItems = "center";
-    modalWindow.style.justifyContent = "center";
+    modalWindow.style.display = "block";
 });
 
 butClose.addEventListener("click", (e) => {
