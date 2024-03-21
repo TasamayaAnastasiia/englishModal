@@ -31,7 +31,7 @@
 }
 .mdl_forma {
     background-color: white;
-    width: 320px;
+    max-width: 320px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -40,8 +40,8 @@
 }
 #comment {
     padding: 12px 16px;
-    width: 272px;
-    height: 96px;
+    max-width: 272px;
+    max-height: 96px;
     background-color: #f0f2f5;
 }
 .forma_for_connect {
@@ -92,7 +92,7 @@
     border: 2px solid #dc3353; 
 }
 .text-com {
-    height: 96px;;
+    max-height: 96px;;
     resize: none;
 }
 .but_submit {
