@@ -1,7 +1,8 @@
 import axios from "axios";
+import close from './sprite.svg#close-icon';
 const buttonClick = document.querySelector(".but");
 const modalWindow = document.querySelector(".mdl_box");
-const contentForm = document.querySelector(".mdl_forma")
+const contentForm = document.querySelector(".mdl_content")
 const butClose = document.querySelector(".close");
 const inputUserName = document.querySelector(".username");
 const butSubmit = document.querySelector(".but_submit");
@@ -45,37 +46,24 @@ async function checkPhone() {
 //succes feedback//
 
 async function succes() {
-    contentForm.innerHTML = "";
-        contentForm.style.height = "312px";
-
-        let str = ``;
-        str += `<svg class="close" fill="black" width="14" height="14">
-                    <use href="./sprite.svg#icon-close"></use>
-                </svg>
+        let str = `
                 <h2 class="title_feedback">See you soon!</h2>
-                <p class="text_feedback">Ваші дані були успішно відправлені.<br> 
-                Будь ласка, очікуйте: я зв'яжуся з Вами<br> якнайшвидше для обговорення деталей.</p>`;
+                <p class="text_feedback">Ваші дані були успішно відправлені.
+                Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.</p>`;
 
         contentForm.innerHTML = str;
         const titleFdbk = document.querySelector(".title_feedback");
         titleFdbk.style.fontSize = "80px";
         titleFdbk.style.margin = "0";
         titleFdbk.style.textAlign = "center";
-        contentForm.style.top = "50%";
-        contentForm.style.transform = "translate(-50%, -50%)";
 }
 
 //succes error//
 
 async function errorr() {
-    contentForm.style.height = "312px";
-
-        let str = ``;
-        str += `<svg class="close" fill="black" width="14" height="14">
-                    <use href="./sprite.svg#icon-close"></use>
-                </svg>
+        let str = `
                 <h2 class="title_feedback">Error</h2>
-                <p class="text_feedback">На жаль, на сайті сталася помилка і Ваші дані<br> не були відправлені. Спробуйте, будь ласка, пізніше.</p>`;
+                <p class="text_feedback">На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше.</p>`;
 
         contentForm.innerHTML = str;
         const titleFdbk = document.querySelector(".title_feedback");
@@ -84,11 +72,11 @@ async function errorr() {
         titleFdbk.style.textAlign = "center";
 } 
 
-buttonClick.addEventListener("click", (e) => {
+buttonClick.addEventListener("click", function () {
     modalWindow.style.display = "block";
 });
 
-butClose.addEventListener("click", (e) => {
+butClose.addEventListener("click", function () {
     modalWindow.style.display = "none";
 });
 
