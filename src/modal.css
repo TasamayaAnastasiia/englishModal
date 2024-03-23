@@ -85,20 +85,31 @@
 /* select*/
 
 select {
-    letter-spacing: inherit !important;
-    word-spacing: inherit !important;
-    -moz-appearance: none !important;
-    -webkit-appearance: none !important;
-    appearance: none !important;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
   }
-  select:not([multiple]) {
-    background-repeat: no-repeat;
-    background-position: right 21px top 21px;
-    background-size: 10px;
-    background-image: url(./sprite.svg#select);
+  .select-box {
+    position: relative;
   }
   select::-ms-expand {
     display: none;
+  }
+  .select-box::before {
+    content: "";
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translate(-50%);
+    display: block;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #292929 transparent;
+    transform: rotate(180deg);
+    pointer-events: none;
   }
 
 /*select */
@@ -177,8 +188,8 @@ select {
         line-height: 156%;
         letter-spacing: 0.01em;
     }
-    select:not([multiple]) {
-        background-position: right 23px top 24px; 
+    .select-box::before {
+        right: 23px;
     }
     .label-inpt {
         font-size: 18px;
