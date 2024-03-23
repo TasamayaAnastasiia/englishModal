@@ -85,11 +85,10 @@
 /* select*/
 
 select {
-    font: inherit;
     letter-spacing: inherit;
     word-spacing: inherit;
     -moz-appearance: none;
-    -webkit-appearance: none;
+    -webkit-appearance: none !important;
     appearance: none;
   }
   select:not([multiple]) {
