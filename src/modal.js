@@ -1,12 +1,12 @@
 import axios from "axios";
 const buttonClick = document.querySelector(".btn-connect");
-const modalWindow = document.querySelector(".mdl_box");
-const contentForm = document.querySelector(".mdl_content")
+const modalWindow = document.querySelector(".mdl-box");
+const contentForm = document.querySelector(".mdl-content")
 const butClose = document.querySelector(".close");
 const inputUserName = document.querySelector(".username");
-const butSubmit = document.querySelector(".but_submit");
+const butSubmit = document.querySelector(".but-submit");
 const inputUserPhone = document.querySelector(".phone");
-const formUser = document.querySelector(".forma_for_connect");
+const formUser = document.querySelector(".forma-for-connect");
 const labelText = document.querySelector("label-inpt");
 const token = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
 let idCzat = -1002080915692;
@@ -33,7 +33,7 @@ formUser.addEventListener("submit", async (e) => {
         });
     }
         
-        const formData = new FormData(document.querySelector('.forma_for_connect'));
+        const formData = new FormData(document.querySelector('.forma-for-connect'));
         const userName = formData.get("username");
         const userPhone = formData.get("phone");
         const education = formData.get("education");
@@ -78,8 +78,8 @@ async function checkPhone() {
 
 async function succes() {
         let str = `
-                <h2 class="title_feedback">See you soon!</h2>
-                <p class="text_feedback">Ваші дані були успішно відправлені. Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.</p>`;
+                <h2 class="title-feedback">See you soon!</h2>
+                <p class="text-feedback">Ваші дані були успішно відправлені. Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.</p>`;
 
         contentForm.innerHTML = str;
         contentForm.style.flexDirection = "column";
@@ -90,8 +90,8 @@ async function succes() {
 
 async function errorr() {
         let str = `
-                <h2 class="title_feedback">Error</h2>
-                <p class="text_feedback">На жаль, на сайті сталася помилка і Ваші дані не<br>були відправлені. Спробуйте, будь ласка, пізніше.</p>`;
+                <h2 class="title-feedback">Error</h2>
+                <p class="text-feedback">На жаль, на сайті сталася помилка і Ваші дані не<br>були відправлені. Спробуйте, будь ласка, пізніше.</p>`;
 
         contentForm.innerHTML = str;
         contentForm.style.flexDirection = "column";

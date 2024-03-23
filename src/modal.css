@@ -1,23 +1,10 @@
 * {
     box-sizing: border-box;
 }
-.btn-connect {
-    border: none;
-    cursor: pointer;
-    width: 224px;
-    height: 96px;
-    background-color: white;
-    background-image: url(./img/button1x.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.but:hover {
-    background-color: #dc3353;
-}
 /**/
 
 
-.mdl_box {
+.mdl-box {
     position: fixed;
     display: none;
     top: 0;
@@ -27,19 +14,19 @@
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.6);
 }
-.mdl_flex {
+.mdl-flex {
     display: flex;
     height: 100%;
     overflow-y: scroll;
 }
-.mdl_forma {
+.mdl-forma {
     position: relative;
     background-color: white;
     max-width: 320px;
     margin: auto;
     padding: 24px;
 }
-.mdl_content {
+.mdl-content {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -52,7 +39,7 @@
     max-height: 96px;
     background-color: #f0f2f5;
 }
-.forma_for_connect {
+.forma-for-connect {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -69,7 +56,7 @@
     line-height: 150%;
     letter-spacing: 0.01em;
 }
-.title_form {
+.title-form {
     font-family: "Playfair Display", sans-serif;
     margin: 0;
     font-weight: 600;
@@ -78,7 +65,7 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
 }
-.paragraf_form {
+.paragraf-form {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -87,7 +74,7 @@
     margin-top: 20px;
     margin-bottom: 32px;
 }
-.text_feedback {
+.text-feedback {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.01em;
@@ -95,6 +82,17 @@
     margin: 0;
     font-family: "Montserrat", sans-serif;
 }
+/* select*/
+.selected-category{
+    appearance: none; 
+}
+.selected-category {
+    background-image: url("./sprite.svg#select") !important;
+    background-size: 16px !important; 
+    background-repeat: no-repeat !important;
+    background-position: right 21px top 22px !important; 
+}
+/*select */
 .user-inpt {
     padding: 12px 16px;
     width: 272px;
@@ -111,7 +109,7 @@
     height: 96px;
     resize: none;
 }
-.but_submit {
+.but-submit {
     border: none;
     cursor: pointer;
     width: 224px;
@@ -120,17 +118,6 @@
     background-image: url(./img/button1x.png);
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-@media (min-resolution: 2dppx) {
-    .but_submit {
-      background-image: url(./img/button2x.png);
-    }
-}
-@media (min-resolution: 3dppx) {
-    .but_submit {
-      background-image: url(./img/button3x.png);
-    }
 }
 
 .close {
@@ -142,7 +129,7 @@
 .close:hover {
     fill: #dc3353;
 }
-.title_feedback {
+.title-feedback {
     font-family: "Hurricane", sans-serif;
     font-weight: 400;
     margin: 0;
@@ -153,12 +140,23 @@
     color: #dc3353;
 }
 
+@media (min-resolution: 2dppx) {
+    .but-submit {
+      background-image: url(./img/button2x.png);
+    }
+}
+@media (min-resolution: 3dppx) {
+    .but-submit {
+      background-image: url(./img/button3x.png);
+    }
+}
+
 @media screen and (min-width: 768px) {
-    .mdl_forma {
+    .mdl-forma {
         max-width: 704px;
         padding: 56px;
     }
-    .text_feedback {
+    .text-feedback {
         width: 500px;
         margin: 0;
     }
@@ -170,6 +168,9 @@
         line-height: 156%;
         letter-spacing: 0.01em;
     }
+    .selected-category {
+        background-position: right 23px top 24px !important; 
+    }
     .label-inpt {
         font-size: 18px;
         line-height: 156%;
@@ -177,13 +178,13 @@
     .text-com {
         height: 108px;
     }
-    .title_form {
+    .title-form {
         font-weight: 600;
         font-size: 56px;
         line-height: 121%;
         width: 350px;
     }
-    .paragraf_form {
+    .paragraf-form {
         font-size: 18px;
         line-height: 156%;
         letter-spacing: 0.01em;
@@ -191,23 +192,23 @@
     }
 }
 @media screen and (min-width: 1440px) {
-    .mdl_forma {
+    .mdl-forma {
         max-width: 1208px;
         padding: 80px 100px;
     }
-    .text_feedback {
+    .text-feedback {
         width: 500px;
     }
-    .mdl_content {
+    .mdl-content {
         flex-direction: row;
         gap: 48px;
     }
-    .title_form {
+    .title-form {
         font-weight: 600;
         font-size: 56px;
         line-height: 121%;
     }
-    .paragraf_form {
+    .paragraf-form {
         margin: 32px 0 0 0;
         width: 280px;
     }
