@@ -18,6 +18,7 @@
     display: flex;
     height: 100%;
     overflow-y: scroll;
+    padding: 20px 0;
 }
 .mdl-forma {
     position: relative;
@@ -91,6 +92,7 @@ select {
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.4);
   }
   .select-box {
     position: relative;
@@ -110,6 +112,7 @@ select {
     border-color: transparent transparent #292929 transparent;
     transform: rotate(180deg);
     pointer-events: none;
+    z-index: 999;
   }
 
 /*select */
@@ -118,9 +121,11 @@ select {
     width: 272px;
     font-family: "Montserrat", sans-serif;
     height: 48px;
-    background: #f0f2f5;
+    background-color: #F0F2F5;
     border: none;
     outline: none;
+    color: black;
+    opacity: 0.4;
 }
 .red {
     border: 2px solid #dc3353; 
@@ -138,6 +143,9 @@ select {
     background-image: url(./img/button1x.png);
     background-repeat: no-repeat;
     background-size: contain;
+}
+.but-submit:hover {
+    filter: grayscale(0.5);
 }
 
 .close {
