@@ -87,7 +87,7 @@
     appearance: none; 
 }
 .selected-category {
-    background-image: url("./sprite.svg#select") !important;
+    background-image: url(./sprite.svg#select) !important;
     background-size: 16px !important; 
     background-repeat: no-repeat !important;
     background-position: right 21px top 22px !important; 
